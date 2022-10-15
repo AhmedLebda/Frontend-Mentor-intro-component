@@ -23,6 +23,7 @@
 *::before {
     padding: 0;
     margin: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 button,
@@ -38,8 +39,14 @@ a {
 body {
     font-family: var(--font-poppins);
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 60px 35px;
 
@@ -80,8 +87,11 @@ body {
     font-family: var(--font-poppins);
     color: #fff;
     background-color: var(--blue);
+    -webkit-box-shadow: 0 8px 0 hsla(249.2, 9.8%, 26.1%, 0.35);
     box-shadow: 0 8px 0 hsla(249.2, 9.8%, 26.1%, 0.35);
     cursor: pointer;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
     transition: 0.25s;
 }
 .uer-info .promo span {
@@ -92,7 +102,10 @@ body {
 
 .uer-info .promo:active {
     background-color: hsl(248, 43.9%, 37.1%);
+    -webkit-transform: translateY(3px);
+    -ms-transform: translateY(3px);
     transform: translateY(3px);
+    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
@@ -101,6 +114,7 @@ body {
     border-radius: 0.7rem;
     padding: 1.4rem;
     background-color: #fff;
+    -webkit-box-shadow: 0 5px 0 hsla(249.2, 9.8%, 26.1%, 0.35);
     box-shadow: 0 5px 0 hsla(249.2, 9.8%, 26.1%, 0.35);
 }
 .form-content form .input-wrapper {
@@ -122,6 +136,8 @@ body {
     position: absolute;
     right: 1rem;
     bottom: calc(50% + 17px);
+    -webkit-transform: translateY(80%);
+    -ms-transform: translateY(80%);
     transform: translateY(80%);
     width: 20px;
     visibility: hidden;
@@ -164,13 +180,19 @@ body {
     color: #fff;
     text-transform: uppercase;
     background-color: var(--green);
+    -webkit-box-shadow: 0 3px hsl(154.1, 45.9%, 40.6%);
     box-shadow: 0 3px hsl(154.1, 45.9%, 40.6%);
     cursor: pointer;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
     transition: 0.25s;
 }
 .form-content form button:active {
     background-color: hsl(154.1, 45.9%, 40.6%);
+    -webkit-transform: translateY(3px);
+    -ms-transform: translateY(3px);
     transform: translateY(3px);
+    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
@@ -199,9 +221,18 @@ body {
     }
     /* Intro Styles */
     .intro {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     .intro h1 {
@@ -209,6 +240,7 @@ body {
     }
     .uer-info .promo {
         padding: 0.7rem;
+        -webkit-box-shadow: 0 3px 0 hsla(249.2, 9.8%, 26.1%, 0.35);
         box-shadow: 0 3px 0 hsla(249.2, 9.8%, 26.1%, 0.35);
     }
     .form-content {
