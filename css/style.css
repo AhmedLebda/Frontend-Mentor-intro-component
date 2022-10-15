@@ -1,0 +1,220 @@
+/* Fonts [poppins] > [400, 500, 600, 700] */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Variables */
+:root {
+    /* Colors */
+
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+
+    /* Fonts */
+
+    --font-poppins: "Poppins", sans-serif;
+}
+
+/* Global Styles */
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+button,
+input {
+    display: block;
+    border: 0;
+    outline: 0;
+}
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--font-poppins);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 35px;
+
+    background: url(../images/bg-intro-mobile.png) var(--red);
+}
+
+/* Content Styles [Mobile First] */
+.content-wrapper {
+    max-width: 340px;
+    text-align: center;
+}
+
+/* Intro Styles */
+.intro {
+    color: #fff;
+    margin-bottom: 3rem;
+}
+.intro h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+.intro p {
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* User Info Styles */
+
+.uer-info .promo {
+    width: 100%;
+    padding: 1.3rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.7rem;
+
+    font-size: 1rem;
+    font-family: var(--font-poppins);
+    color: #fff;
+    background-color: var(--blue);
+    box-shadow: 0 8px 0 hsla(249.2, 9.8%, 26.1%, 0.35);
+    cursor: pointer;
+    transition: 0.25s;
+}
+.uer-info .promo span {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.uer-info .promo:active {
+    background-color: hsl(248, 43.9%, 37.1%);
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+/* Form Styles */
+.form-content {
+    border-radius: 0.7rem;
+    padding: 1.4rem;
+    background-color: #fff;
+    box-shadow: 0 5px 0 hsla(249.2, 9.8%, 26.1%, 0.35);
+}
+.form-content form .input-wrapper {
+    position: relative;
+    margin-bottom: 1rem;
+}
+.form-content form .input-wrapper input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid hsla(246, 25%, 77%, 0.745);
+    border-radius: 0.4rem;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    background-color: transparent;
+}
+.form-content form .input-wrapper .error {
+    position: absolute;
+    right: 1rem;
+    bottom: calc(50% + 17px);
+    transform: translateY(80%);
+    width: 20px;
+    visibility: hidden;
+}
+.form-content form .input-wrapper .error-message {
+    font-size: 0.7rem;
+    text-align: right;
+    color: var(--red);
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 0.3rem;
+    display: none;
+}
+.form-content form input:focus {
+    border: 1px solid black;
+}
+
+/* Start of Active Status Class Styles For JS */
+.form-content form .input-wrapper.active input {
+    color: var(--red);
+    border: 1px solid var(--red);
+}
+.form-content form .input-wrapper.active .error {
+    visibility: visible;
+}
+.form-content form .input-wrapper.active .error-message {
+    display: block;
+}
+/* End of Active Status Class Styles For JS */
+
+.form-content form button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.4rem;
+    border-radius: 0.4rem;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    color: #fff;
+    text-transform: uppercase;
+    background-color: var(--green);
+    box-shadow: 0 3px hsl(154.1, 45.9%, 40.6%);
+    cursor: pointer;
+    transition: 0.25s;
+}
+.form-content form button:active {
+    background-color: hsl(154.1, 45.9%, 40.6%);
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.terms {
+    font-size: 0.8rem;
+    color: var(--grayish-blue);
+}
+.terms a {
+    font-weight: 700;
+    color: var(--red);
+    text-transform: capitalize;
+}
+
+/* Desktop Styles */
+
+@media screen and (min-width: 1136px) {
+    body {
+        background: url(../images/bg-intro-desktop.png) var(--red);
+    }
+    .content-wrapper {
+        max-width: 70%;
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+    }
+    /* Intro Styles */
+    .intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .intro h1 {
+        font-size: 3rem;
+    }
+    .uer-info .promo {
+        padding: 0.7rem;
+        box-shadow: 0 3px 0 hsla(249.2, 9.8%, 26.1%, 0.35);
+    }
+    .form-content {
+        padding: 2rem;
+    }
+    .terms {
+        text-align: center;
+    }
+}
